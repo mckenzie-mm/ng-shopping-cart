@@ -5,7 +5,6 @@ Here is a modern, clean, and reactive shopping cart example in Angular utilizing
 ### 1. Define the Data Models
 Create an interface for the items available in your shop and the items managed inside the cart.
 ```ts
-typescript
 
 // product.model.ts
 export interface Product {
@@ -25,7 +24,6 @@ export interface CartItem {
 This service uses a signal to manage the cart state dynamically. It uses a computed signal to automatically calculate the total cost and item count in real-time. 
 
 ```ts
-typescript
 
 // cart.service.ts
 import { Injectable, signal, computed } from '@angular/core';
@@ -88,7 +86,6 @@ export class CartService {
 This standalone component simulates a small catalogue where users can push items into the CartService. 
 
 ```ts
-typescript
 
 // product-list.component.ts
 import { Component, inject } from '@angular/core';
@@ -133,7 +130,6 @@ export class ProductListComponent {
 This component reads values directly from the CartService using Signals. Angular updates the DOM automatically whenever items, quantities, or computed totals shift. 
 
 ```ts
-typescript
 
 // shopping-cart.component.ts
 import { Component, inject } from '@angular/core';
@@ -196,7 +192,6 @@ export class ShoppingCartComponent {
 ### 5. Combine Components in App Component
 
 ```ts
-typescript
 
 // app.component.ts
 import { Component } from '@angular/core';
