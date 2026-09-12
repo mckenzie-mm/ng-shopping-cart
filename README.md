@@ -1,10 +1,7 @@
 Here is a modern, clean, and reactive shopping cart example in Angular utilizing Angular Signals (available in Angular 16+). This architecture leverages a single global service to hold the cart state and standalone components to display the catalog and cart seamlessly.
 
- [1] (https://dev.to/leolanese/angular-17-signals-with-stand-alone-shopping-cart-3oon), 
- 
- [2] (https://github.com/leolanese/Angular-Signals-StandAlone-Shopping-Cart)
-
-1. Define the Data ModelsCreate an interface for the items available in your shop and the items managed inside the cart.
+## 1. 
+Define the Data ModelsCreate an interface for the items available in your shop and the items managed inside the cart.
 ```ts
 typescript
 
@@ -22,11 +19,8 @@ export interface CartItem {
 }
 ```
 
-2. Create the Reactive Cart ServiceThis service uses a signal to manage the cart state dynamically. It uses a computed signal to automatically calculate the total cost and item count in real-time. 
-
-[1] (https://github.com/leolanese/Angular-Signals-StandAlone-Shopping-Cart), 
-
-[2] (https://dev.to/leolanese/angular-17-signals-with-stand-alone-shopping-cart-3oon)
+## 2. 
+Create the Reactive Cart ServiceThis service uses a signal to manage the cart state dynamically. It uses a computed signal to automatically calculate the total cost and item count in real-time. 
 
 ```ts
 typescript
@@ -88,9 +82,8 @@ export class CartService {
 }
 ```
 
-3. Create the Product List ComponentThis standalone component simulates a small catalogue where users can push items into the CartService. 
-
-[1] (https://v17.angular.io/start/start-data)
+## 3. 
+Create the Product List ComponentThis standalone component simulates a small catalogue where users can push items into the CartService. 
 
 ```ts
 typescript
@@ -134,11 +127,8 @@ export class ProductListComponent {
 }
 ```
 
-4. Create the Shopping Cart View ComponentThis component reads values directly from the CartService using Signals. Angular updates the DOM automatically whenever items, quantities, or computed totals shift. 
-
-[1] (https://dev.to/leolanese/angular-17-signals-with-stand-alone-shopping-cart-3oon), 
-
-[2] (https://github.com/leolanese/Angular-Signals-StandAlone-Shopping-Cart)
+## 4. 
+Create the Shopping Cart View ComponentThis component reads values directly from the CartService using Signals. Angular updates the DOM automatically whenever items, quantities, or computed totals shift. 
 
 ```ts
 typescript
@@ -201,7 +191,8 @@ export class ShoppingCartComponent {
 }
 ```
 
-5. Combine Components in App Component
+## 5. 
+Combine Components in App Component
 
 ```ts
 typescript
@@ -225,3 +216,10 @@ import { ShoppingCartComponent } from './shopping-cart.component';
 })
 export class AppComponent {}
 ```
+
+## References
+
+ [1] (https://dev.to/leolanese/angular-17-signals-with-stand-alone-shopping-cart-3oon), 
+ 
+ [2] (https://github.com/leolanese/Angular-Signals-StandAlone-Shopping-Cart)
+
