@@ -1,6 +1,6 @@
 Here is a modern, clean, and reactive shopping cart example in Angular utilizing Angular Signals (available in Angular 16+). This architecture leverages a single global service to hold the cart state and standalone components to display the catalog and cart seamlessly.
 
-## 1. 
+### 1. 
 Define the Data ModelsCreate an interface for the items available in your shop and the items managed inside the cart.
 ```ts
 typescript
@@ -19,7 +19,7 @@ export interface CartItem {
 }
 ```
 
-## 2. 
+### 2. 
 Create the Reactive Cart ServiceThis service uses a signal to manage the cart state dynamically. It uses a computed signal to automatically calculate the total cost and item count in real-time. 
 
 ```ts
@@ -82,7 +82,7 @@ export class CartService {
 }
 ```
 
-## 3. 
+### 3. 
 Create the Product List ComponentThis standalone component simulates a small catalogue where users can push items into the CartService. 
 
 ```ts
@@ -127,7 +127,7 @@ export class ProductListComponent {
 }
 ```
 
-## 4. 
+### 4. 
 Create the Shopping Cart View ComponentThis component reads values directly from the CartService using Signals. Angular updates the DOM automatically whenever items, quantities, or computed totals shift. 
 
 ```ts
@@ -191,7 +191,7 @@ export class ShoppingCartComponent {
 }
 ```
 
-## 5. 
+### 5. 
 Combine Components in App Component
 
 ```ts
