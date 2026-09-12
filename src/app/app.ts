@@ -1,11 +1,12 @@
-import { Component, signal } from '@angular/core';
+// src/app/app.component.ts
+import { Component } from '@angular/core';
+import { ProductListComponent } from './components/product-list/product-list';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart';
 
 @Component({
-  imports: [],
   selector: 'app-root',
+  imports: [ProductListComponent, ShoppingCartComponent],
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
-export class App {
-  protected readonly title = signal('ng-shopping-cart');
-}
+export class App {}
